@@ -23,9 +23,8 @@ export function Navigation() {
   };
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/80 backdrop-blur-md shadow-lg' : 'bg-transparent'
-    }`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
@@ -38,32 +37,32 @@ export function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:space-x-8">
-            <Link to="/students" className="flex items-center text-gray-700 hover:text-indigo-600 transition-colors duration-200">
+            <Link to="/about" className="flex items-center text-black hover:text-indigo-600 transition-colors duration-200">
               <Graduation className="h-5 w-5 mr-1" />
-              <span>Students</span>
+              <span>About</span>
             </Link>
-            <Link to="/colleges" className="flex items-center text-gray-700 hover:text-indigo-600 transition-colors duration-200">
+            <Link to="/colleges" className="flex items-center text-black hover:text-indigo-600 transition-colors duration-200">
               <Building2 className="h-5 w-5 mr-1" />
               <span>Colleges</span>
             </Link>
-            <Link to="/companies" className="flex items-center text-gray-700 hover:text-indigo-600 transition-colors duration-200">
+            <Link to="/company" className="flex items-center text-black hover:text-indigo-600 transition-colors duration-200">
               <Briefcase className="h-5 w-5 mr-1" />
               <span>Companies</span>
             </Link>
             {user ? (
               <button
                 onClick={handleLogout}
-                className="flex items-center text-gray-700 hover:text-indigo-600 transition-colors duration-200"
+                className="flex items-center  text-black hover:text-indigo-600 transition-colors duration-200"
               >
                 <LogOut className="h-5 w-5 mr-1" />
                 <span>Logout</span>
               </button>
             ) : (
               <Link
-                to="/login"
+                to="/contact"
                 className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200"
               >
-                Sign In
+                Contact
               </Link>
             )}
           </div>

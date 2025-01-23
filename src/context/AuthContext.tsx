@@ -34,14 +34,19 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const login = async (email: string, password: string) => {
     try {
       // Simulate API call
-      const mockUser = {
-        id: '1',
+      const role: User['role'] = email.includes('student')
+        ? 'student'
+        : email.includes('college')
+          ? 'college'
+          : 'company';
+
+      const mockUser: User = {
+        id: '1', // Example ID for mock purposes
         email,
-        role: email.includes('student') ? 'student' : 
-              email.includes('college') ? 'college' : 'company',
-        name: 'John Doe'
+        role,
+        name: 'John Doe', // Example name for mock purposes
       };
-      
+
       setUser(mockUser);
       localStorage.setItem('user', JSON.stringify(mockUser));
       navigate(`/${mockUser.role}s`);

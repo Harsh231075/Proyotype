@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { GraduationCap, Building2, Briefcase, Users, BookOpen, BarChart } from 'lucide-react';
 
 const features = [
