@@ -22,7 +22,7 @@ const StudentMentorForm = ({ role }) => {
   const colleges = ["College A", "College B", "College C"]; // Mock college names
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-4  text-black">
       <select
         name="collegeName"
         className="w-full border rounded px-4 py-2"

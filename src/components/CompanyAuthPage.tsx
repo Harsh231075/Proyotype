@@ -67,7 +67,7 @@ const CompanyAuthPage = () => {
 
         {/* Register Form */}
         {activeTab === "register" && (
-          <form onSubmit={handleRegisterSubmit} className="space-y-4">
+          <form onSubmit={handleRegisterSubmit} className="space-y-4  text-black">
             <div>
               <label className="block font-medium text-gray-700">Company Name</label>
               <input

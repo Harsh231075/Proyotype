@@ -13,7 +13,7 @@ export const AboutPage = () => {
           industry and education.
         </p>
         <img
-          src="https://via.placeholder.com/800x400"
+          src="https://static.vecteezy.com/system/resources/thumbnails/006/802/460/small_2x/businesswoman-reading-documents-at-meeting-business-partner-considering-contract-terms-before-signing-checking-legal-contract-law-conditions-selected-focus-photo.jpg"
           alt="Platform Overview"
           className="rounded-lg shadow-lg"
         />
