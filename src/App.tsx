@@ -16,7 +16,7 @@ import { NotImplementedPage } from './pages/NotImplementedPage';
 import CompanyAuthPage from './components/CompanyAuthPage';
 import { AboutPage } from './components/AboutPage';
 import { ContactPage } from './pages/ContactPage';
-
+import Header from './Students/Header';
 function ProtectedRoute({ children, allowedRoles }: { children: React.ReactNode, allowedRoles: string[] }) {
   const { user, isLoading } = useAuth();
 
@@ -35,7 +35,7 @@ function AppRoutes() {
   const location = useLocation();
 
   // Define routes where the Navbar and Footer should be hidden
-  const hideNavbarFooter = ['/dashboard', '/not-implemented'].includes(location.pathname);
+  const hideNavbarFooter = ['/dashboard', '/not-implemented', '/students'].includes(location.pathname);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-indigo-900">
@@ -54,6 +54,7 @@ function AppRoutes() {
             </main>
           }
         />
+        <Route path='/students' element={<Header />} />
         <Route path='/company' element={<CompanyAuthPage />} />
         <Route path="/not-implemented" element={<NotImplementedPage />} />
         <Route path="/dashboard" element={<Dashboard />} />

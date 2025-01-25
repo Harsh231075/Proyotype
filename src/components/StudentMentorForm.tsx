@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const StudentMentorForm = ({ role }) => {
@@ -16,7 +16,9 @@ const StudentMentorForm = ({ role }) => {
     e.preventDefault();
     console.log(`${role} Login:`, formData);
     alert(`${role} login successful!`);
-    navigate("/not-implemented");
+    if (role === "Student") {
+      navigate("/students")
+    } else { navigate('/not-implemented'); }
   };
 
   const colleges = ["College A", "College B", "College C"]; // Mock college names
